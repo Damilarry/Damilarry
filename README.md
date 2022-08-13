@@ -1,7 +1,7 @@
 - 👋 Hi, I’m @Damilarry
 - 👀 I’m interested in coding.
-- 🌱 I’m currently learning Soft developer.
-- 💞️ I’m looking to collaborate on different project
+- 🌱 I’m currently learning to become a full stark software developer.
+- 💞️ I’m looking to collaborate on different project.
 - 📫 How to reach me (damilarry46@gmail,com)
 
 <!---
