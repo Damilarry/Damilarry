@@ -1,113 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="utf-8">
-	<title>dementor Calculator </title>
-
-	<script>
-		//function that display value
-		function dis(val)
-		{
-			document.getElementById("result").value+=val
-		}
-		
-		//function that evaluates the digit and return result
-		function solve()
-		{
-			let x = document.getElementById("result").value
-			let y = eval(x)
-			document.getElementById("result").value = y
-		}
-		
-		//function that clear the display
-		function clr()
-		{
-			document.getElementById("result").value = ""
-		}
-	</script>
-	<!-- for styling -->
+    <meta charset="utf-8">
+    <title>music dementor</title>
 	<style>
-		.title{
-		margin-bottom: 12px;
-		text-align:center;
-        font-size: 28px;
-		width: 540px;
-        background-color: black;
-		color: white;
-		border: solid black 5px;
-		margin-left: auto;  
-        margin-right: auto; 
+
+		/* Styling the body */
+		* {
+			padding: 0;
+			margin: 0;
 		}
 
-		.title:hover{
-			background-color: bisque;
-		}
-        
-		input[type="button"]
-		{
-		background-color:black;
-		color: white;
-		border: solid black 5px;
-		width: 130px;
-        height:60px;
-		}
-
-        input[type="button"]:hover
-        {
-        background-color: aqua;
+		/* Styling the background image by
+		giving its url and position */
+		.container {
+			height: 100vh;
+			width: 100%;
+			background-image: url(
+            'https://images.unsplash.com/photo-1657391255165-83ddea6a3f48?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80/background.jpg');
+			
+			/* Image used: */
+			background-size: cover;
+			background-position: center;
+			position: relative;
 		}
 
-		input[type="text"]
-		{
-		background-color:white;
-        border: solid gold 2px;
-        width:99%
+		/* Styling the list tags to the
+		right of the navigation bar */
+		.nav li {
+			float: right;
+			list-style: none;
 		}
 
-		table, th, td {    
-        margin-left: auto;  
-        margin-right: auto;     
-        text-align: center;  
-        }    
+		/* Styling the anchor tags of
+		the navigation bar */
+		.nav a {
+			list-style: none;
+			height: 50px;
+			line-height: 50px;
+			font-size: 1rem;
+			font-weight: 550;
+			display: block;
+			padding: 5px 35px;
+			color: paleturquoise;
+			text-decoration: none;
+		}
+
+		/* Giving position and margin
+		to the content-div */
+		.content {
+			width: 100%;
+			position: absolute;
+			top: 45%;
+		}
+
+		/* Styling the left-col by
+		giving margin */
+		.left-col {
+			margin-left: 11%;
+		}
+
+		/* Styling the my sound placed
+		in the left-col */
+		.left-col h1 {
+			font-size: 50px;
+			color: whitesmoke;
+		}
+
+		/* Styling the right-col */
+		.right-col {
+			float: right;
+			margin-right: 10%;
+			margin-top: -5%;
+			display: flex;
+			align-items: center;
+		}
+
+		/* Styling the text in the right-col */
+		.right-col p {
+			font-size: 21px;
+			color: peachpuff;
+			font-weight: 650;
+			margin-right: 20px;
+		}
+
+		/* Styling the cursor type
+		of the icon to pointer */
+		#icon {
+			cursor: pointer;
+		}
+
+        .container :hover{
+            background-color: pink;
+        }
 
 	</style>
 </head>
-<!-- create table -->
+
 <body>
-	<div class = title >Dementor's Calculator</div>
-	<table border="1">
-		<tr>
-			<td colspan="3"><input type="text" id="result"/></td>
-			<!-- clr() function will call clr to clear all value -->
-			<td><input type="button" value="c" onclick="clr()"/> </td>
-		</tr>
-		<tr>
-			<!-- create button and assign value to each button -->
-			<!-- dis("1") will call function dis to display value -->
-			<td><input type="button" value="9" onclick="dis('9')"/> </td>
-			<td><input type="button" value="8" onclick="dis('8')"/> </td>
-			<td><input type="button" value="7" onclick="dis('7')"/> </td>
-			<td><input type="button" value="/" onclick="dis('/')"/> </td>
-		</tr>
-		<tr>
-			<td><input type="button" value="6" onclick="dis('6')"/> </td>
-			<td><input type="button" value="5" onclick="dis('5')"/> </td>
-			<td><input type="button" value="4" onclick="dis('4')"/> </td>
-			<td><input type="button" value="-" onclick="dis('-')"/> </td>
-		</tr>
-		<tr>
-			<td><input type="button" value="3" onclick="dis('3')"/> </td>
-			<td><input type="button" value="2" onclick="dis('2')"/> </td>
-			<td><input type="button" value="1" onclick="dis('1')"/> </td>
-			<td><input type="button" value="+" onclick="dis('+')"/> </td>
-		</tr>
-		<tr>
-			<td><input type="button" value="." onclick="dis('.')"/> </td>
-			<td><input type="button" value="0" onclick="dis('0')"/> </td>
-			<!-- solve function call function solve to evaluate value -->
-			<td><input type="button" value="=" onclick="solve()"/> </td>
-			<td><input type="button" value="*" onclick="dis('*')"/> </td>
-		</tr>
-	</table>
+	<div class="container">
+		<ul class="nav">
+			<li><a href="#">CONTACT</a></li>
+			<li><a href="#">ABOUT</a></li>
+			<li><a href="#">ARTISTS</a></li>
+			<li><a href="#">MUSIC</a></li>
+			<li><a href="#">HOME</a></li>
+		</ul>
+	</div>
+
+	<div class="content">
+		<div class="left-col">
+			<h1>MY <br> DEMENTOR SOUNDS</h1>
+		</div>
+
+		<div class="right-col">
+			
+
+<p>Click Here To Listen</p>
+
+
+			<img src="media/play.png" id="icon">
+		</div>
+	</div>
+
+	<audio id="mysound">
+		<source src="media/music.mp3" type="audio/mp3">
+	</audio>
+
+	<script>
+		var mysound = document.getElementById("mysound");
+		var icon = document.getElementById("icon");
+
+		// Creating a function that will change
+		// pause to play and vice-versa
+		icon.onclick = function() {
+			if (mysound.paused) {
+
+				// If paused then play the
+				// music and change the image
+				mysound.play();
+				icon.src =
+                "https://assets.dryicons.com/uploads/icon/preview/7087/large_1x_play.png";
+			} else {
+
+				// If playing then pause the
+				// music and change the image
+				mysound.pause();
+				icon.src =
+                "https://assets.dryicons.com/uploads/icon/svg/6932/9090d01e-1cfe-4738-a7c6-fb578c1205eb.svg";
+			}
+		}
+	</script>
+    <footer id="myFooter" class="clear">
+        Copyright about website
+    </footer>
 </body>
+
 </html>
